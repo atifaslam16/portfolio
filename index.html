@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B.Tech Portfolio - [ATIF ASLAM]</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#4f46e5', // Indigo 600
+                        'secondary': '#10b981', // Emerald 500
+                    }
+                }
+            }
+        }
+        </script>
+</head>
+
+<body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100 min-h-screen">
+
+    <!-- Navbar -->
+    <header class="sticky top-0 z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo/Name -->
+                <a href="#home" class="text-2xl font-bold text-primary hover:text-indigo-700 transition duration-300">
+                    Portfolio
+                </a>
+
+                <!-- Navigation Links (Desktop) -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#about"
+                        class="nav-link text-gray-600 dark:text-gray-300 hover:text-primary transition duration-200 py-1"
+                        data-section="about">About</a>
+                    <a href="#education"
+                        class="nav-link text-gray-600 dark:text-gray-300 hover:text-primary transition duration-200 py-1"
+                        data-section="education">Education</a>
+                    <a href="#skills"
+                        class="nav-link text-gray-600 dark:text-gray-300 hover:text-primary transition duration-200 py-1"
+                        data-section="skills">Skills</a>
+                    <a href="#achievements"
+                        class="nav-link text-gray-600 dark:text-gray-300 hover:text-primary transition duration-200 py-1"
+                        data-section="achievements">Achievements</a>
+                    <a href="#contact"
+                        class="nav-link text-gray-600 dark:text-gray-300 hover:text-primary transition duration-200 py-1"
+                        data-section="contact">Contact</a>
+                </nav>
+
+                <!-- Actions (Mobile Menu Button & Theme Toggle) -->
+                <div class="flex items-center space-x-3">
+                    
+                    <button id="mobile-menu-button"
+                        class="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition duration-300">
+                        <i data-lucide="menu" class="w-6 h-6 text-gray-600 dark:text-gray-300"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col items-center">
+                <a href="#about"
+                    class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-indigo-50 dark:hover:bg-gray-800 w-full text-center">About</a>
+                <a href="#education"
+                    class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-indigo-50 dark:hover:bg-gray-800 w-full text-center">Education</a>
+                <a href="#skills"
+                    class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-indigo-50 dark:hover:bg-gray-800 w-full text-center">Skills</a>
+                <a href="#achievements"
+                    class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-indigo-50 dark:hover:bg-gray-800 w-full text-center">Achievements</a>
+                <a href="#contact"
+                    class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-indigo-50 dark:hover:bg-gray-800 w-full text-center">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto pt-6 pb-20 px-4 sm:px-6 lg:px-8">
+
+        <!-- 1. Hero Section (ENHANCED) -->
+        <section id="home" class="min-h-[calc(100vh-4rem)] flex items-center py-16">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+               <!-- Text Content -->
+                <div class="space-y-6 text-center md:text-left">
+                    
+                    <!-- NEW PROFILE IMAGE LOGO BLOCK (Simplified Circular Design) -->
+                    <div class="flex justify-center md:justify-start pb-6">
+                        <div class="w-28 h-28 sm:w-36 sm:h-36 rounded-full overflow-hidden border-4 border-primary shadow-xl ring-4 ring-primary/20 transition duration-300 transform hover:scale-105">
+                            <img src="photo1.jpg" 
+                                 alt="Shreya Rao Profile Picture" 
+                                 class="w-full h-full object-cover"
+                                 onerror="this.onerror=null;this.src='https://placehold.co/300x300/4f46e5/ffffff?text=SR';"
+                            >
+                        </div>
+                    </div>
+                    <!-- END NEW PROFILE IMAGE LOGO BLOCK -->
+                    <p class="text-lg font-medium text-primary uppercase tracking-wider">Hi there, I'm</p>
+                    <h1 class="text-6xl sm:text-7xl font-extrabold leading-tight">
+                        <span
+                            class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-indigo-400 dark:from-indigo-400 dark:to-primary">
+                            Atif Aslam
+                        </span>
+                    </h1>
+                    <!-- Dynamic Typing Text Container -->
+                    <p class="text-3xl text-gray-700 dark:text-gray-300 font-medium h-10 md:h-12">
+                        A passionate <span id="typing-text" class="text-secondary font-bold"></span>
+                    </p>
+                    <p class="text-xl text-gray-600 dark:text-gray-300 max-w-lg mx-auto md:mx-0">
+                        Computer Science student specializing in Data Science **scalable full-stack applications** and
+                        robust cloud infrastructure.
+                    </p>
+                    <div class="flex justify-center md:justify-start space-x-4 pt-4 flex-wrap">
+                        <!-- UPDATED BUTTON: View Achievements (Primary) -->
+                        <a href="#achievements"
+                            class="px-6 py-3 bg-primary text-white font-semibold rounded-lg shadow-lg hover:bg-indigo-700 transition duration-300 transform hover:scale-105">View
+                            Achievements</a>
+                        <!-- UPDATED BUTTON: Resume (Secondary) -->
+                        <a href="https://goresume.io/md-1761794648042063/shrs_968cb48498e9443e8b5d36e49f452710"
+                            class="px-6 py-3 border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 font-semibold rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition duration-300 flex items-center space-x-2">
+                            <i data-lucide="download" class="w-5 h-5"></i>
+                            <span>Resume</span>
+                        </a>
+                    </div>
+                    <!-- Professional Social Links -->
+                    <div class="flex justify-center md:justify-start space-x-4 pt-4 text-gray-600 dark:text-gray-300">
+                        <a href="https://www.linkedin.com/in/atif-aslam-at016" target="_blank"
+                            class="hover:text-primary transition duration-300" aria-label="LinkedIn">
+                            <i data-lucide="linkedin" class="w-6 h-6"></i>
+                        </a>
+                        <a href="https://github.com/atifaslam16" target="_blank"
+                            class="hover:text-primary transition duration-300" aria-label="GitHub">
+                            <i data-lucide="github" class="w-6 h-6"></i>
+                        </a>
+                        <a href="mailto:atif36421@gmail.com" class="hover:text-primary transition duration-300"
+                            aria-label="gmail">
+                            <i data-lucide="gmail" class="w-6 h-6"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Professional Code Graphic -->
+                <div class="hidden md:flex justify-center">
+                    <div
+                        class="w-full max-w-sm bg-gray-900 rounded-xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition duration-500">
+                        <!-- Window Header -->
+                        <div class="flex items-center space-x-2 p-3 border-b border-gray-700">
+                            <span class="w-3 h-3 bg-red-500 rounded-full"></span>
+                            <span class="w-3 h-3 bg-yellow-500 rounded-full"></span>
+                            <span class="w-3 h-3 bg-green-500 rounded-full"></span>
+                            <span class="text-xs text-gray-400 ml-auto">portfolio.jsx</span>
+                        </div>
+                        <!-- Code Snippet (Simulated Syntax Highlighting) -->
+                        <pre class="p-4 text-sm overflow-x-auto">
+<code class="language-jsx">
+<span style="color:#63B3ED;">const</span> <span style="color:#F6E05E;">AtifAslam</span> = (<span style="color:#A0AEC0;">props</span>) <span style="color:#63B3ED;">=></span> {
+    <span style="color:#68D391;">const</span> <span style="color:#F6E05E;">skills</span> = [<span style="color:#9F7AEA;">'React'</span>, <span style="color:#9F7AEA;">'Node'</span>, <span style="color:#9F7AEA;">'AWS'</span>];
+    
+    <span style="color:#A0AEC0;">return</span> (
+        <span style="color:#48BB78;"><ProjectList</span>
+            <span style="color:#9F7AEA;">focus</span>=<span style="color:#F6E05E;">{</span><span style="color:#9F7AEA;">"Full Stack"</span><span style="color:#F6E05E;">}</span>
+            <span style="color:#9F7AEA;">achievements</span>=<span style="color:#F6E05E;">{</span><span style="color:#9F7AEA;">3</span><span style="color:#F6E05E;">}</span>
+            <span style="color:#9F7AEA;">languages</span>=<span style="color:#F6E05E;">{</span><span style="color:#9F7AEA;">"Python, Java"</span><span style="color:#F6E05E;">}</span>
+        <span style="color:#48BB78;">/></span>
+    );
+};
+<span style="color:#63B3ED;">export</span> <span style="color:#68D391;">default</span> <span style="color:#F6E05E;">AtifAslam</span>;
+</code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. About Me Section -->
+        <section id="about" class="py-20">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-900 dark:text-white">About Me</h2>
+                <p class="text-xl text-gray-500 dark:text-gray-400 mt-2">A dedicated student on the path to innovation.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-10 bg-white dark:bg-gray-800 p-8 rounded-xl shadow-2xl">
+                <div class="md:col-span-2 space-y-6">
+                    <p class="text-lg leading-relaxed">
+                        I am Atif Aslam, currently pursuing my Bachelor of Technology (B.Tech) in Computer Science and
+                        Engineering. My academic journey has equipped me with strong fundamentals in **Data Structures,
+                        Algorithms, and Object-Oriented Programming (OOP)**.
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        My primary interests lie in **Full-Stack Development** and **Cloud Computing**. I actively seek
+                        out opportunities to apply theoretical knowledge to real-world projects, consistently focusing
+                        on code quality, performance, and user experience. I am always eager to learn new technologies
+                        and contribute to challenging team environments.
+                    </p>
+                </div>
+                <!-- Contact Info Sidebar -->
+                <div class="space-y-6 md:space-y-8 p-6 bg-gray-50 dark:bg-gray-900 rounded-lg shadow-inner">
+                    <h3 class="text-xl font-semibold text-primary">Details</h3>
+                    <div class="flex items-center space-x-3">
+                        <i data-lucide="mail" class="w-6 h-6 text-secondary"></i>
+                        <span class="text-gray-700 dark:text-gray-300">atif36421@gmail.com</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i data-lucide="map-pin" class="w-6 h-6 text-secondary"></i>
+                        <span class="text-gray-700 dark:text-gray-300">Bhopal, India</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i data-lucide="linkedin" class="w-6 h-6 text-secondary"></i>
+                        <a href="https://www.linkedin.com/in/atif-aslam-at016" target="_blank"
+                            class="text-primary hover:underline">LinkedIn Profile</a>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i data-lucide="github" class="w-6 h-6 text-secondary"></i>
+                        <a href="https://github.com/atifaslam16?tab=repositories" target="_blank"
+                            class="text-primary hover:underline">GitHub Repos</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Education Section -->
+        <section id="education" class="py-20">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-900 dark:text-white">Education & Campus Life</h2>
+                <p class="text-xl text-gray-500 dark:text-gray-400 mt-2">Where my technical foundation was built.</p>
+            </div>
+
+            <!-- UPDATED GRID: Changed to md:grid-cols-7 for ~57/43 split -->
+            <div class="grid md:grid-cols-7 gap-10 items-center">
+                <!-- Education Details: ADDED md:col-span-4 -->
+                <div class="md:col-span-4 space-y-8 bg-white dark:bg-gray-800 p-8 rounded-xl shadow-2xl h-full">
+                    <h3 class="text-2xl font-semibold text-primary border-b pb-2 border-gray-200 dark:border-gray-700">
+                        Academic History</h3>
+
+                    <div class="border-l-4 border-primary pl-4">
+                        <p class="text-xl font-bold text-gray-900 dark:text-white">
+                            Bachelor of Technology (B.Tech), CSE
+                        </p>
+                        <p class="text-md text-gray-600 dark:text-gray-300">
+                            IES College Of Technology | Bhopal, India
+                        </p>
+                        <p class="text-md text-gray-500 dark:text-gray-400 mt-1">
+                            **2023 - 2027** |
+                        </p>
+                    </div>
+
+                    <div class="border-l-4 border-gray-400 pl-4 pt-4">
+                        <p class="text-xl font-bold text-gray-900 dark:text-white">
+                            High School (HSC)
+                        </p>
+                        <p class="text-md text-gray-600 dark:text-gray-300">
+                            Bihar School Examination Board
+                        </p>
+                        <p class="text-md text-gray-500 dark:text-gray-400 mt-1">
+                            **2021 - 2023** | Score: **75%**
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Slideshow Container: ADDED md:col-span-3 -->
+                <div class="md:col-span-3 relative w-full overflow-hidden rounded-xl shadow-2xl aspect-16-9">
+                    <div class="absolute inset-0">
+                        <div id="slideshow-container" class="flex transition-transform duration-500 ease-in-out h-full">
+                            <!-- Slide 1: Placeholder image for Campus 1 -->
+                            <div class="slide min-w-full flex items-center justify-center">
+                                <img src="ies camp.jpg" alt="University Campus View"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <!-- Slide 2: Placeholder image for Lab -->
+                            <div class="slide min-w-full flex items-center justify-center">
+                                <img src="ies.jpg" alt="Computer Lab Session" class="w-full h-full object-cover">
+                            </div>
+                            <!-- Slide 3: Placeholder image for Graduation -->
+                            <div class="slide min-w-full flex items-center justify-center">
+                                <img src="img ies.webp" alt="Project Presentation Event"
+                                    class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slideshow Controls -->
+                    <button id="prev-slide" onclick="changeSlide(-1)"
+                        class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition z-10 focus:outline-none focus:ring-2 focus:ring-white/50"
+                        aria-label="Previous Slide">
+                        <i data-lucide="chevron-left" class="w-6 h-6"></i>
+                    </button>
+                    <button id="next-slide" onclick="changeSlide(1)"
+                        class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition z-10 focus:outline-none focus:ring-2 focus:ring-white/50"
+                        aria-label="Next Slide">
+                        <i data-lucide="chevron-right" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 4. Skills Section -->
+        <section id="skills" class="py-20 bg-gray-100 dark:bg-gray-800 rounded-xl shadow-inner">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-900 dark:text-white">Technical Skills</h2>
+                <p class="text-xl text-gray-500 dark:text-gray-400 mt-2">Proficient in core programming and modern web
+                    development.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 p-6">
+
+                <!-- Skill Category 1: Languages & Core -->
+                <div
+                    class="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                    <h3 class="text-2xl font-semibold mb-4 text-primary flex items-center">
+                        <i data-lucide="code" class="w-6 h-6 mr-2"></i>
+                        Languages & Core
+                    </h3>
+                    <div class="space-y-2">
+                        <!-- UPDATED SKILL BADGES WITH ICONS -->
+                        <span class="skill-badge"><i data-lucide="terminal" class="w-4 h-4 mr-1"></i>Python</span>
+                        <span class="skill-badge"><i data-lucide="cpu" class="w-4 h-4 mr-1"></i>C/C++</span>
+                        <span class="skill-badge"><i data-lucide="coffee" class="w-4 h-4 mr-1"></i>Java</span>
+                        <span class="skill-badge"><i data-lucide="zap" class="w-4 h-4 mr-1"></i>JavaScript (ES6+)</span>
+                        <span class="skill-badge"><i data-lucide="binary" class="w-4 h-4 mr-1"></i>DSA</span>
+                        <span class="skill-badge"><i data-lucide="database" class="w-4 h-4 mr-1"></i>SQL
+                            (PostgreSQL)</span>
+                    </div>
+                </div>
+
+                <!-- Skill Category 2: Web & Frameworks -->
+                <div
+                    class="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                    <h3 class="text-2xl font-semibold mb-4 text-primary flex items-center">
+                        <i data-lucide="globe" class="w-6 h-6 mr-2"></i>
+                        Web & Frameworks
+                    </h3>
+                    <div class="space-y-2">
+                        <!-- UPDATED SKILL BADGES WITH ICONS -->
+                        <span class="skill-badge"><i data-lucide="atom" class="w-4 h-4 mr-1"></i>React.js</span>
+                        <span class="skill-badge"><i data-lucide="box" class="w-4 h-4 mr-1"></i>Node.js / Express</span>
+                        <span class="skill-badge"><i data-lucide="wind" class="w-4 h-4 mr-1"></i>Tailwind CSS</span>
+                        <span class="skill-badge"><i data-lucide="layout-list" class="w-4 h-4 mr-1"></i>HTML5 &
+                            CSS3</span>
+                        <span class="skill-badge"><i data-lucide="folder-search" class="w-4 h-4 mr-1"></i>MongoDB /
+                            Mongoose</span>
+                        <span class="skill-badge"><i data-lucide="link" class="w-4 h-4 mr-1"></i>RESTful APIs</span>
+                    </div>
+                </div>
+
+                <!-- Skill Category 3: Tools & Cloud -->
+                <div
+                    class="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                    <h3 class="text-2xl font-semibold mb-4 text-primary flex items-center">
+                        <i data-lucide="settings" class="w-6 h-6 mr-2"></i>
+                        Tools & Platforms
+                    </h3>
+                    <div class="space-y-2">
+                        <!-- UPDATED SKILL BADGES WITH ICONS -->
+                        <span class="skill-badge"><i data-lucide="git-fork" class="w-4 h-4 mr-1"></i>Git & GitHub</span>
+                        <span class="skill-badge"><i data-lucide="ship" class="w-4 h-4 mr-1"></i>Docker</span>
+                        <span class="skill-badge"><i data-lucide="cloud" class="w-4 h-4 mr-1"></i>AWS Basics</span>
+                        <span class="skill-badge"><i data-lucide="command" class="w-4 h-4 mr-1"></i>Linux</span>
+                        <span class="skill-badge"><i data-lucide="clipboard-list" class="w-4 h-4 mr-1"></i>Jira /
+                            Agile</span>
+                        <span class="skill-badge"><i data-lucide="brackets" class="w-4 h-4 mr-1"></i>VS Code</span>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- 5. Achievements & Certificates Section (Replacing Projects) -->
+        <section id="achievements" class="py-20">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-900 dark:text-white">Achievements & Certifications</h2>
+                <p class="text-xl text-gray-500 dark:text-gray-400 mt-2">Validated skills and competitive success.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+                <!-- Achievement Card 1: Certification -->
+                <div class="achievement-card">
+                    <h3 class="text-xl font-semibold mb-2 text-secondary flex items-center">
+                        <i data-lucide="award" class="w-5 h-5 mr-2 text-primary"></i>
+                        Data Science & Analytics
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">Excited to share that I have completed the HPLIFE
+                        online course on Data Science & Analytics!</p>
+                    <div class="flex flex-wrap space-x-2 mb-4">
+                        <span class="cert-tag">Data</span>
+                        <span class="cert-tag">Data Mining</span>
+                        <span class="cert-tag">Data visualization</span>
+                    </div>
+                    <a href="certificate (1).pdf" target="_blank" class="cert-link">
+                        View Certificate
+                        <i data-lucide="external-link" class="w-4 h-4 ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- Achievement Card 2:  -->
+                <div class="achievement-card">
+                    <h3 class="text-xl font-semibold mb-2 text-primary flex items-center">
+                        <i data-lucide="trophy" class="w-5 h-5 mr-2 text-secondary"></i>
+                        Data Analytics Job Simulation
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">*Completed a Deloitte job simulaton involving data
+                        analysis and forensic technology</p>
+                    <div class="flex flex-wrap space-x-2 mb-4">
+                        <span class="cert-tag">Created data dashboard using Tableau</span>
+                        <span class="cert-tag">Used Excel</span>
+                        <span class="cert-tag"></span>Bussiness conclusion
+                    </div>
+                    <a href="Data Analytics Job Simulation.png" target="_blank" class="cert-link">
+                        view certificate
+                        <i data-lucide="external-link" class="w-4 h-4 ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- Achievement Card 3: -->
+                <div class="achievement-card">
+                    <h3 class="text-xl font-semibold mb-2 text-primary flex items-center">
+                        <i data-lucide="book-open-check" class="w-5 h-5 mr-2 text-primary"></i>
+                        Coding for Data
+                    </h3>
+                    <p class="text-600 dark:text-gray-400 mb-4">Took my first step deeper into data science by
+                        completing the coding for DATA course on sololearn. Gained valuable skills in writing efficient
+                        code for data analysis and handling real_world data task. This course deepend my understanding
+                        of data focused programming concept and practical coding skills </p>
+                    <div class="flex flex-wrap space-x-2 mb-4">
+                        <span class="cert-tag">Python</span>
+                        <span class="cert-tag">ML</span>
+                        <span class="cert-tag">Data Analysis</span>
+                    </div>
+                    <a href="Coding for Data_certificate.jpg" target="_blank" class="cert-link">
+                        View Certificate
+                        <i data-lucide="external-link" class="w-4 h-4 ml-1"></i>
+                    </a>
+                </div>
+            </div>
+
+
+        </section>
+
+        <!-- 6. Contact Section -->
+        <section id="contact" class="py-20 bg-indigo-50 dark:bg-gray-800 rounded-xl shadow-2xl p-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-900 dark:text-white">Get In Touch</h2>
+                <p class="text-xl text-gray-500 dark:text-gray-400 mt-2">I am currently looking for internship and
+                    full-time opportunities.</p>
+            </div>
+
+            <div class="max-w-xl mx-auto">
+                <form id="contact-form" class="space-y-6 bg-white dark:bg-gray-900 p-8 rounded-lg shadow-xl">
+                    <div>
+                        <label for="name"
+                            class="block text-sm font-medium text-gray-700 dark:text-gray-200">Name</label>
+                        <input type="text" id="name" name="name" required
+                            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-3 focus:border-primary focus:ring-primary dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+                            placeholder="Your Name">
+                    </div>
+                    <div>
+                        <label for="email"
+                            class="block text-sm font-medium text-gray-700 dark:text-gray-200">Email</label>
+                        <input type="email" id="email" name="email" required
+                            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-3 focus:border-primary focus:ring-primary dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+                            placeholder="you@example.com">
+                    </div>
+                    <div>
+                        <label for="message"
+                            class="block text-sm font-medium text-gray-700 dark:text-gray-200">Message</label>
+                        <textarea id="message" name="message" rows="4" required
+                            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-3 focus:border-primary focus:ring-primary dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+                            placeholder="I'd love to discuss an opportunity..."></textarea>
+                    </div>
+                    <button type="submit" id="submit-button"
+                        class="w-full py-3 px-4 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-primary hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition duration-300 transform hover:scale-[1.01]">
+                        Send Message
+                    </button>
+                    <div id="status-message" class="text-center mt-4 hidden text-sm font-medium rounded-lg p-3"></div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (ENHANCED) -->
+    <footer class="bg-gray-900 dark:bg-gray-950 border-t border-indigo-900/50 py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 border-b border-gray-700 pb-8 mb-8">
+                <!-- Branding/Quick Intro -->
+                <div class="col-span-2 md:col-span-1 space-y-3">
+                    <a href="#home"
+                        class="text-3xl font-extrabold text-primary hover:text-indigo-400 transition duration-300">
+                        A. A.
+                    </a>
+                    <p class="text-sm text-gray-400">
+                        Third Year B.Tech CSE Student. Building the future, one commit at a time.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="space-y-3">
+                    <h4 class="text-lg font-semibold text-white">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="#about" class="hover:text-primary transition duration-200">About Me</a></li>
+                        <li><a href="#education" class="hover:text-primary transition duration-200">Education</a></li>
+                        <li><a href="#skills" class="hover:text-primary transition duration-200">Technical Skills</a>
+                        </li>
+                        <li><a href="#achievements" class="hover:text-primary transition duration-200">Achievements</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="space-y-3">
+                    <h4 class="text-lg font-semibold text-white">Contact Info</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li class="flex items-center space-x-2">
+                            <i data-lucide="mail" class="w-4 h-4 text-secondary"></i>
+                            <span>atif36421@gmail.com</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-secondary"></i>
+                            <span>Bhopal, 462010, India</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Social Media -->
+                <div class="space-y-3">
+                    <h4 class="text-lg font-semibold text-white">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.linkedin.com/in/atif-aslam-at016" target="_blank"
+                            class="text-gray-400 hover:text-primary transition duration-300" aria-label="LinkedIn">
+                            <i data-lucide="linkedin" class="w-6 h-6"></i>
+                        </a>
+                        <a href="https://github.com/atifaslam16" target="_blank"
+                            class="text-gray-400 hover:text-primary transition duration-300" aria-label="GitHub">
+                            <i data-lucide="github" class="w-6 h-6"></i>
+                        </a>
+                        <a href="mailto:atif67417@gmail.com"
+                            class="text-gray-400 hover:text-primary transition duration-300" aria-label="Email">
+                            <i data-lucide="mail" class="w-6 h-6"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="text-center text-gray-500 text-sm">
+                <p>&copy; 2025 Atif Aslam. All rights reserved.</p>
+                <p class="mt-1">Powered by modern web standards</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

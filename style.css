@@ -1,0 +1,127 @@
+/* Custom styles for professional look and smooth scrolling */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Style for active navigation link */
+.nav-link.active {
+    font-weight: 700;
+    color: theme('colors.indigo.500');
+    border-bottom: 2px solid theme('colors.indigo.500');
+}
+
+/* Custom scrollbar for better aesthetics */
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: theme('colors.indigo.300');
+    border-radius: 4px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: theme('colors.gray.100');
+}
+
+.dark body::-webkit-scrollbar-thumb {
+    background-color: theme('colors.indigo.700');
+    border-radius: 4px;
+}
+
+.dark body::-webkit-scrollbar-track {
+    background-color: theme('colors.gray.800');
+}
+
+/* Slideshow custom transition container */
+#slideshow-container {
+    width: 100%;
+}
+
+.slide {
+    flex-shrink: 0;
+    /* Important for preventing slides from shrinking */
+}
+
+/* Utility class to enforce a 16:9 aspect ratio */
+.aspect-16-9 {
+    padding-top: 56.25%;
+    /* 9 / 16 = 0.5625 */
+}
+
+.skill-badge {
+    display: inline-flex;
+    /* Changed to flex for icon alignment */
+    align-items: center;
+    /* Vertically center icon and text */
+    padding: 0.5rem 1rem;
+    margin: 0.25rem;
+    background-color: theme('colors.indigo.50');
+    color: theme('colors.indigo.600');
+    font-weight: 600;
+    border-radius: 9999px;
+    font-size: 0.9rem;
+    border: 1px solid theme('colors.indigo.200');
+}
+
+.dark .skill-badge {
+    background-color: theme('colors.gray.700');
+    color: theme('colors.indigo.300');
+    border-color: theme('colors.gray.600');
+}
+
+/* New CSS styles for the achievement section */
+                .achievement-card {
+                    background-color: theme('colors.white');
+                    border: 1px solid theme('colors.gray.200');
+                    padding: 1.5rem;
+                    border-radius: 0.75rem;
+                    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+                    transition: transform 0.3s, box-shadow 0.3s;
+                }
+
+                .dark .achievement-card {
+                    background-color: theme('colors.gray.900');
+                    border-color: theme('colors.gray.700');
+                    box-shadow: 0 4px 6px -1px rgba(255, 255, 255, 0.05);
+                }
+
+                .achievement-card:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.2);
+                    /* Shadow using secondary color for distinction */
+                }
+
+                .cert-tag {
+                    display: inline-flex;
+                    padding: 0.25rem 0.75rem;
+                    margin-bottom: 0.5rem;
+                    font-size: 0.875rem;
+                    font-weight: 500;
+                    color: theme('colors.emerald.600');
+                    /* Use secondary color for cert tags */
+                    background-color: theme('colors.emerald.100');
+                    border-radius: 0.375rem;
+                }
+
+                .dark .cert-tag {
+                    color: theme('colors.emerald.200');
+                    background-color: theme('colors.gray.700');
+                }
+
+                .cert-link {
+                    display: flex;
+                    align-items: center;
+                    font-weight: 600;
+                    color: theme('colors.secondary');
+                    text-decoration: none;
+                    margin-top: 1rem;
+                    transition: color 0.2s;
+                }
+
+                .cert-link:hover {
+                    color: theme('colors.emerald.700');
+                }
