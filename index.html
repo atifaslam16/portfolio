@@ -58,9 +58,13 @@
 
                 <!-- Actions (Mobile Menu Button & Theme Toggle) -->
                 <div class="flex items-center space-x-3">
-                    
-                    <button id="mobile-menu-button"
-                        class="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition duration-300">
+                    <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition duration-300" aria-label="Toggle dark mode">
+                        <!-- Icon will be set by JS -->
+                        <span id="theme-icon">
+                            <i data-lucide="moon" class="w-5 h-5 text-gray-500 dark:text-gray-400"></i>
+                        </span>
+                    </button>
+                    <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition duration-300">
                         <i data-lucide="menu" class="w-6 h-6 text-gray-600 dark:text-gray-300"></i>
                     </button>
                 </div>
@@ -559,5 +563,6 @@
         </div>
     </footer>
 </body>
+
 
 </html>
