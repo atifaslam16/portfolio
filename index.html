@@ -23,7 +23,7 @@
                 }
             }
         }
-        </script>
+    </script>
 </head>
 
 <body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100 min-h-screen">
@@ -58,13 +58,16 @@
 
                 <!-- Actions (Mobile Menu Button & Theme Toggle) -->
                 <div class="flex items-center space-x-3">
-                    <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition duration-300" aria-label="Toggle dark mode">
+                    <button id="theme-toggle"
+                        class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition duration-300"
+                        aria-label="Toggle dark mode">
                         <!-- Icon will be set by JS -->
                         <span id="theme-icon">
                             <i data-lucide="moon" class="w-5 h-5 text-gray-500 dark:text-gray-400"></i>
                         </span>
                     </button>
-                    <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition duration-300">
+                    <button id="mobile-menu-button"
+                        class="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition duration-300">
                         <i data-lucide="menu" class="w-6 h-6 text-gray-600 dark:text-gray-300"></i>
                     </button>
                 </div>
@@ -94,17 +97,15 @@
         <!-- 1. Hero Section (ENHANCED) -->
         <section id="home" class="min-h-[calc(100vh-4rem)] flex items-center py-16">
             <div class="grid md:grid-cols-2 gap-12 items-center">
-               <!-- Text Content -->
+                <!-- Text Content -->
                 <div class="space-y-6 text-center md:text-left">
-                    
+
                     <!-- NEW PROFILE IMAGE LOGO BLOCK (Simplified Circular Design) -->
                     <div class="flex justify-center md:justify-start pb-6">
-                        <div class="w-28 h-28 sm:w-36 sm:h-36 rounded-full overflow-hidden border-4 border-primary shadow-xl ring-4 ring-primary/20 transition duration-300 transform hover:scale-105">
-                            <img src="photo1.jpg" 
-                                 alt="Shreya Rao Profile Picture" 
-                                 class="w-full h-full object-cover"
-                                 onerror="this.onerror=null;this.src='https://placehold.co/300x300/4f46e5/ffffff?text=SR';"
-                            >
+                        <div
+                            class="w-28 h-28 sm:w-36 sm:h-36 rounded-full overflow-hidden border-4 border-primary shadow-xl ring-4 ring-primary/20 transition duration-300 transform hover:scale-105">
+                            <img src="photo1.jpg" alt="Shreya Rao Profile Picture" class="w-full h-full object-cover"
+                                onerror="this.onerror=null;this.src='https://placehold.co/300x300/4f46e5/ffffff?text=SR';">
                         </div>
                     </div>
                     <!-- END NEW PROFILE IMAGE LOGO BLOCK -->
@@ -276,8 +277,7 @@
                         <div id="slideshow-container" class="flex transition-transform duration-500 ease-in-out h-full">
                             <!-- Slide 1: Placeholder image for Campus 1 -->
                             <div class="slide min-w-full flex items-center justify-center">
-                                <img src="ies camp.jpg" alt="University Campus View"
-                                    class="w-full h-full object-cover">
+                                <img src="ies camp.jpg" alt="University Campus View" class="w-full h-full object-cover">
                             </div>
                             <!-- Slide 2: Placeholder image for Lab -->
                             <div class="slide min-w-full flex items-center justify-center">
@@ -460,13 +460,10 @@
             </div>
 
             <div class="max-w-xl mx-auto">
-<!-- Line 648 of portfolio.html (approx.) -->
-<form 
-    action="https://formsubmit.co/ajax/atif36421@gmail.com" 
-    method="POST" 
-    id="contact-form" 
-    class="space-y-6 bg-white dark:bg-gray-900 p-8 rounded-lg shadow-xl"
->                    <div>
+                <!-- Line 648 of portfolio.html (approx.) -->
+                <form action="https://formsubmit.co/ajax/atif36421@gmail.com" method="POST" id="contact-form"
+                    class="space-y-6 bg-white dark:bg-gray-900 p-8 rounded-lg shadow-xl">
+                    <div>
                         <label for="name"
                             class="block text-sm font-medium text-gray-700 dark:text-gray-200">Name</label>
                         <input type="text" id="name" name="name" required
@@ -571,4 +568,3 @@
 
 
 </html>
-
