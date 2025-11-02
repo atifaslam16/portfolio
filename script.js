@@ -214,39 +214,4 @@
                     observer.observe(section);
                 }
             });
-
-
-            // --- Contact Form Simulation ---
-            form.addEventListener('submit', async (e) => {
-                e.preventDefault();
-                submitButton.disabled = true;
-                submitButton.textContent = 'Sending...';
-                statusMessage.classList.add('hidden');
-
-                // Simulate form submission (Replace with actual backend call if available)
-                const formData = new FormData(form);
-                const data = Object.fromEntries(formData.entries());
-
-                try {
-                    // Simulate network delay
-                    await new Promise(resolve => setTimeout(resolve, 1500));
-
-                    // Success Message
-                    statusMessage.textContent = `Thank you, ${data.name}! Your message has been received. I will reply to ${data.email} shortly.`;
-                    statusMessage.classList.remove('hidden', 'text-red-500', 'bg-red-100', 'dark:bg-red-900/50');
-                    statusMessage.classList.add('text-green-600', 'bg-green-100', 'dark:bg-green-900/50');
-                    form.reset();
-
-                } catch (error) {
-                    console.error('Submission failed:', error);
-                    // Error Message
-                    statusMessage.textContent = 'An error occurred. Please try sending your message again later.';
-                    statusMessage.classList.remove('hidden', 'text-green-600', 'bg-green-100', 'dark:bg-green-900/50');
-                    statusMessage.classList.add('text-red-500', 'bg-red-100', 'dark:bg-red-900/50');
-                } finally {
-                    submitButton.disabled = false;
-                    submitButton.textContent = 'Send Message';
-                }
-            });
-
         });
