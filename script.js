@@ -125,8 +125,8 @@
             startSlideShow();
 
             const body = document.body;
-            const themeToggle = document.getElementById('theme-toggle');
-            const themeIcon = document.getElementById('theme-icon');
+            // const themeToggle = document.getElementById('theme-toggle');
+            // const themeIcon = document.getElementById('theme-icon');
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
             const navLinks = document.querySelectorAll('.nav-link');
@@ -142,26 +142,26 @@
 
 
             // --- Theme Toggle Logic ---
-            const currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            // const currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
 
-            if (currentTheme === 'dark') {
-                body.classList.add('dark');
-                updateThemeIcon('sun');
-            } else {
-                updateThemeIcon('moon');
-            }
+            // if (currentTheme === 'dark') {
+            //     body.classList.add('dark');
+            //     updateThemeIcon('sun');
+            // } else {
+            //     updateThemeIcon('moon');
+            // }
 
-            function updateThemeIcon(iconName) {
-                themeIcon.innerHTML = `<i data-lucide="${iconName}" class="w-5 h-5 text-gray-500 dark:text-gray-400"></i>`;
-                lucide.createIcons();
-            }
+            // function updateThemeIcon(iconName) {
+            //     themeIcon.innerHTML = `<i data-lucide="${iconName}" class="w-5 h-5 text-gray-500 dark:text-gray-400"></i>`;
+            //     lucide.createIcons();
+            // }
 
-            themeToggle.addEventListener('click', () => {
-                body.classList.toggle('dark');
-                const newTheme = body.classList.contains('dark') ? 'dark' : 'light';
-                localStorage.setItem('theme', newTheme);
-                updateThemeIcon(newTheme === 'dark' ? 'sun' : 'moon');
-            });
+            // themeToggle.addEventListener('click', () => {
+            //     body.classList.toggle('dark');
+            //     const newTheme = body.classList.contains('dark') ? 'dark' : 'light';
+            //     localStorage.setItem('theme', newTheme);
+            //     updateThemeIcon(newTheme === 'dark' ? 'sun' : 'moon');
+            // });
 
 
             // --- Mobile Menu Toggle ---
